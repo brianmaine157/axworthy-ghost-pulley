@@ -1,0 +1,44 @@
+Category,Part,Purpose,Qty Per Build,Qty Per Pack,Where To Buy,Part Number / Ref,Link,Notes
+Core,Seeeduino XIAO SAMD21,Microcontroller,1,1,Amazon (Seeed Studio),Seeed XIAO SAMD21 (ATSAMD21G18A),https://a.co/d/06WSjVxy,Use Seeed SAMD board package
+Core,A4988 stepper driver module,STEP/DIR motor driver,1,3,Amazon (WWZMDiB),A4988,https://a.co/d/0cpniapO,1/8 microstep; set Vref ~0.4-0.5V
+Core,DS3231 RTC module,Scheduling clock,1,1,Amazon (Dorhea),DS3231,https://a.co/d/0i0HqPRa,I2C 0x68; onboard pull-ups
+Core,CR2032 battery,RTC backup,1,2,Amazon (Energizer),CR2032,https://a.co/d/0bv8MjWc,Fits DS3231 holder
+Core,SSD1309 2.42in OLED I2C,Display,1,1,Amazon (HiLetgo),SSD1309 128x64,https://a.co/d/05t35Wxv,I2C 0x3C; onboard pull-ups; 3.3V
+Core,EC11 rotary encoder w/ switch,Menu input,1,10,Amazon (DIYhz),EC11,https://a.co/d/0eueh0Od,CLK/DT/SW
+Core,Micro limit switch roller-lever,Homing/endstop,1,1,Amazon (HiLetgo),-,https://www.amazon.com/dp/B07X142VGC,Wire NC + COM
+Power,TSR 1-2450 (Traco),12V to 5V buck SIP3,1,2,Amazon (AOTUPASION),TSR 1-2450,https://a.co/d/0bQRsoD2,Drop-in; feeds XIAO 5V pad
+Power,NOYITO AC-DC 120V-12V 2A,System power,1,1,Amazon (NOYITO),-,https://a.co/d/0e7NLVbR,Isolated AC-DC module OR use 12V barrel adapter
+Power,DC-005 barrel jack 5.5x2.1mm,Optional 12V input,1,50,Amazon (Clyxgs),DC-005,https://a.co/d/0fidOFS1,Center-positive; only if using barrel jack
+Power,47uF 50V electrolytic cap,A4988 VMOT bulk,1,50,Amazon (Innfeeltech),-,https://a.co/d/05nts4Yw,Across VMOT/GND
+Passives,DIP switch 3-position 2.54mm,Microstep select MS1/2/3,1,5,Amazon (uxcell),3-pos DIP,https://a.co/d/0bJygiCu,Set ON/ON/OFF = 1/8
+Passives,10k ohm resistor,MS pull-downs + ENABLE pull-up,4,100,Amazon (EDGELEC),10k,https://a.co/d/09GDdvaT,3x MS pulldown + 1x ENABLE pullup
+Passives,Terminal block 3-pin 5mm PCB mount,Drive + Voltage connectors,4,20,Amazon (Tegg),3-pin 5mm 250V 8A,https://a.co/d/0hnKyZVu,Four 3-pin blocks: motor + limit + power + AUX
+Passives,Female pin headers 2.54mm,Module sockets,2,40,Amazon (Dahszhi),-,https://a.co/d/02sVTZys,Socket XIAO/OLED/DS3231
+PCB,Axworthy Block 2 bare PCB,Mainboard,1,1,Tindie (author's shop),-,https://www.tindie.com/products/44123/,Solder-it-yourself blank board; no components included; Gerbers not published
+Mechanical,Joyfy hanging ghost 47 LED,The ghost itself,1,1,Target (Joyfy),-,https://www.target.com/p/joyfy-halloween-hanging-ghost-outdoor-decoration-47-led-light-hanging-ghost-halloween-hanging-decoration-for-indoor-outdoor-party-decor/-/A-1005691718,Prop that rides the line; any lightweight ghost works
+Mechanical,NEMA 17 stepper 1.5A ~42Ncm,Drive motor,1,3,Amazon (STEPPERONLINE),NEMA17,https://www.amazon.com/dp/B00PNEQKC0,200 steps/rev bipolar
+Mechanical,608 2RS ball bearing 8x22x7,Pulley shaft support,5,20,Amazon,608-2RS,https://a.co/d/0aapJzzu,Skate bearing
+Mechanical,Dowel pin 8x60mm SS,Pulley/shaft,2,5,Amazon (uxcell),-,https://a.co/d/0h0HNcBo,Match gear/pulley bore
+Fasteners,Hex socket head cap screw M3x0.50 6mm,Assembly (into M3 inserts),27,varies,Hardware store / McMaster,M3x0.50x6,-,Into M3 inserts; incl 1 self-tapped
+Fasteners,Hex socket head cap screw M2x0.40 6mm,Assembly (into M2 inserts),4,varies,Hardware store / McMaster,M2x0.40x6,-,Pinion + clock
+Fasteners,Hex socket head cap screw M2x0.40 10mm,Limit switch + OLED,6,varies,Hardware store / McMaster,M2x0.40x10,-,Limit switch (2) + OLED (4)
+Fasteners,Hex socket head cap screw M2x0.40 4mm,Assembly (into M2 inserts),4,varies,Hardware store / McMaster,M2x0.40x4,-,Into M2 heat-set inserts
+Fasteners,Hex socket head cap screw M4x0.70 30mm,Assembly (into M4 inserts),4,varies,Hardware store / McMaster,M4x0.70x30,-,Lid
+Fasteners,M2 washer,Back OLED screws,8,varies,Hardware store,M2 washer,-,Use 4-8 so screw tips don't protrude
+Fasteners,Hex head bolt M12x1.75 55mm,Pulley/output shaft,2,varies,Hardware store / McMaster,M12x1.75x55,-,Pulley/output shaft
+Fasteners,Hex nut M12x1.75 grade A&B,Pulley/output shaft,2,varies,Hardware store / McMaster,M12x1.75,-,Pulley/output shaft
+Fasteners,Heat-set insert M3 tapered brass,For M3 screws,28,varies,McMaster-Carr,94180A331,-,Press into printed plastic
+Fasteners,Heat-set insert M4 tapered brass,For M4 screws,4,varies,McMaster-Carr,94180A351,-,Press into printed plastic
+Fasteners,Heat-set insert M2 tapered brass,For M2 screws,10,varies,McMaster-Carr,94180A307,-,Press into printed plastic
+Fasteners,Wood screw #8 x 2in,Mount unit to wood/structure,6,varies,Hardware store,#8x2,-,Mounting screws
+Wiring,22/6 stranded tinned cable,Motor + limit run,as needed,1,Amazon (RESHAKE),22/6,https://www.amazon.com/RESHAKE-Electrical-Thermostat-Irrigation-Automotive/dp/B0C7MLSV8F,4 coil + 2 limit; sleeve if sun-exposed
+Wiring,WEIPU SP13 6-pin kit,Enclosure/drive disconnect + cable entry,2,1,Amazon (ZBLZGP WEIPU),SP1312 rear-nut,https://www.amazon.com/dp/B0CB8K5WQJ,IP68; panel-mount SP13 is the sealed cable entry both ends; no gland needed
+Enclosure,USB-C panel-mount cable flush/dash mount,External flash port,1,1,Amazon (CERRXIAN USB-C),-,https://a.co/d/0aMCXJ4x,30cm USB-C 2.0; size printed enclosure hole to this part; shelter or cap; not IP-rated
+Enclosure,USB-C 90deg adapter male-to-female,Right-angle USB-C for XIAO,1,1,Amazon (AGVEE),USB-C 3.2 Gen2 10G,https://a.co/d/00o2YN2m,Angles flashing cable to clear inside enclosure
+Enclosure,AC power cord 18/3 SJT NEMA 5-15,Wall power,1,1,Amazon (Pinfox),-,https://a.co/d/0bUXQiGp,Switch breaks LINE (hot)
+Enclosure,Mini rocker switch SPST KCD11 10x15mm,Power switch,1,10,Amazon (VEXUNGA),KCD11 3A 250V,https://a.co/d/01NQFCxt,Breaks AC LINE (hot)
+Enclosure,Kevlar line high tensile,Ghost travel line,as needed,1,Amazon (9KM DWLIFE),50-1500lb braided,https://a.co/d/0h1WJ8JD,High-strength Kevlar; consumable
+Enclosure,Turnbuckle,Tension the ghost line,1,1,McMaster-Carr,3003T14,https://www.mcmaster.com/3003T14/,Takes up slack / tensions travel line
+Enclosure,Acrylic sheet ~3x3in,Screen guard window,1,1,Hardware store,-,-,Glued into printed screen guard; remove film first
+Enclosure,Super glue (cyanoacrylate),Screen guard bonding,as needed,1,Hardware store,-,-,Seal screen guard groove water-tight
+Enclosure,Cable clamp,AC cord strain relief,1,1,Hardware store,-,-,AC option; fastened with M3x6mm

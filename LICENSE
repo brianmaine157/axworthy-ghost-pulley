@@ -1,0 +1,75 @@
+Axworthy Ghost — Block 2 — Licensing
+
+Copyright (c) 2026 brianmaine157 (Axworthy Ghost project)
+
+This project mixes freely-shared materials with a commercial hardware product.
+Different parts are covered by different terms, as described below.
+
+==============================================================================
+1. FIRMWARE  —  MIT License
+==============================================================================
+The firmware source code (the Arduino sketch and any accompanying code) is
+licensed under the MIT License:
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+==============================================================================
+2. DOCUMENTATION  —  CC BY 4.0
+==============================================================================
+The documentation (README, build guide, bill of materials, wiring diagrams,
+and other written/graphic instructions) is licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+  You are free to share and adapt this material for any purpose, including
+  commercially, provided you give appropriate credit and indicate changes.
+  https://creativecommons.org/licenses/by/4.0/
+
+==============================================================================
+3. SCHEMATIC  —  Reference only (All Rights Reserved)
+==============================================================================
+The schematic diagrams are published for REFERENCE ONLY — to help builders
+understand, assemble, repair, and modify a board they have obtained. They are
+NOT licensed for reproduction, redistribution, or manufacture of physical
+circuit boards for sale. All rights reserved.
+
+==============================================================================
+4. PCB FABRICATION FILES (Gerbers, drill files, board layout)  —  NOT INCLUDED
+==============================================================================
+The manufacturing files for the printed circuit board (Gerbers, drill files,
+CAD board-layout files) are NOT part of this public release and are NOT
+licensed for any use. The bare PCB is offered as a commercial product by the
+author. All rights reserved.
+
+==============================================================================
+NAME AND LOGO
+==============================================================================
+The name "Axworthy Ghost" and the associated ghost logo/artwork are reserved by
+the author and are NOT licensed for reuse. Please use your own branding for any
+modified or derivative work.
+
+==============================================================================
+SUMMARY (plain language, not legal text)
+==============================================================================
+  * Firmware: free to use/modify/redistribute (MIT).
+  * Docs/BOM/build guide: free to share, just credit the project (CC BY).
+  * Schematic: look at it, build/repair from it — but don't manufacture boards
+    for sale from it.
+  * Gerbers / PCB files: not shared. The bare PCB is sold by the author.
+  * This is NOT an "open source hardware" project; it is open firmware + open
+    docs with a commercial bare-PCB product.
