@@ -120,9 +120,9 @@ McMaster-Carr.
 | Mini rocker switch, SPST on/off (KCD11, 10x15mm) | Power switch | 1 | 10 | [Amazon (VEXUNGA)](https://a.co/d/01NQFCxt) | 3A 250V / 6A 125V. Wired to break the AC LINE (hot). |
 | Kevlar line (high tensile) | Ghost travel line | as needed | 1 | [Amazon (9KM DWLIFE)](https://a.co/d/0h1WJ8JD) | High-strength braided Kevlar (50-1500lb). Shared consumable. |
 | Turnbuckle | Tension the ghost line | 1 | 1 | [McMaster 3003T14](https://www.mcmaster.com/3003T14/) | Takes up slack / tensions the travel line. |
-| Acrylic sheet, ~3x3" | Screen guard window | 1 | 1 | — | Glued into the printed screen guard over the OLED. Remove protective film first. |
+| Acrylic sheet, ~3x3" | Screen guard window | 1 | 1 | [3 x 3 Inch Clear Acrylic](https://a.co/d/0cLpbIf1) | Glued into the printed screen guard over the OLED. Remove protective film first. |
 | Super glue (cyanoacrylate) | Screen guard bonding | as needed | 1 | — | Bonds the acrylic + screen guard; seal the groove water-tight. |
-| Cable clamp | AC cord strain relief | 1 | 1 | — | Clamps the AC cord inside the box (AC power option). Fastened with M3x6mm. |
+
 
 ---
 
