@@ -34,7 +34,7 @@ bare PCB.
 
 | File / folder | What it is |
 |---|---|
-| [`Axworthy Assembly Guide R1.pdf`](Axworthy%20Assembly%20Guide%20R1.pdf) | Full step-by-step build guide, including the schematic and interconnect (wiring) diagrams. |
+| [`Axworthy Assembly Guide R2.pdf`](Axworthy%20Assembly%20Guide%20R2.pdf) | Full step-by-step build guide, including the schematic and interconnect (wiring) diagrams. |
 | [`Axworthy User Guide R0.pdf`](Axworthy%20User%20Guide%20R0.pdf) | How to operate the finished prop (menus, modes, scheduling). |
 | [`BOM.md`](BOM.md) / [`BOM.csv`](BOM.csv) | Bill of materials — every part with purchase links. |
 | [`firmware/`](firmware) | The Arduino firmware (MIT licensed). |
@@ -49,7 +49,7 @@ bare PCB.
 2. **Get the controller board** — order the bare PCB from
    [Tindie](https://www.tindie.com/products/44123/) (solder-it-yourself; no parts
    included) and buy the components from the [BOM](BOM.md).
-3. **Assemble** by following the [Assembly Guide](Axworthy%20Assembly%20Guide%20R1.pdf).
+3. **Assemble** by following the [Assembly Guide](Axworthy%20Assembly%20Guide%20R2.pdf).
 4. **Flash the firmware** in the Arduino IDE:
    - Install the **Seeed SAMD Boards** package and select **Seeeduino XIAO**.
    - Install the libraries listed at the top of the sketch
