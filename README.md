@@ -1,3 +1,5 @@
+<img width="961" height="720" alt="Cover 4_3" src="https://github.com/user-attachments/assets/707afe2d-62e5-49d9-a54f-9fc0bc93f211" />
+
 # Axworthy Ghost Pulley
 
 A DIY, Arduino-based Halloween prop that glides a ghost back and forth along a
