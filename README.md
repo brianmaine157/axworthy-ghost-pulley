@@ -37,7 +37,7 @@ bare PCB.
 | File / folder | What it is |
 |---|---|
 | [`Axworthy Assembly Guide R2.pdf`](Axworthy%20Assembly%20Guide%20R2.pdf) | Full step-by-step build guide, including the schematic and interconnect (wiring) diagrams. |
-| [`Axworthy User Guide R0.pdf`](Axworthy%20User%20Guide%20R0.pdf) | How to operate the finished prop (menus, modes, scheduling). |
+| [`Axworthy User Guide R1.pdf`](Axworthy%20User%20Guide%20R1.pdf) | How to operate the finished prop (menus, modes, scheduling, motor-current tuning). |
 | [`BOM.md`](BOM.md) / [`BOM.csv`](BOM.csv) | Bill of materials — every part with purchase links. |
 | [`firmware/`](firmware) | The Arduino firmware (MIT licensed). |
 | [`LICENSE`](LICENSE) | Full licensing terms. |
@@ -57,7 +57,7 @@ bare PCB.
    - Install the libraries listed at the top of the sketch
      ([`firmware/ghost_pulley_xiao`](firmware/ghost_pulley_xiao)).
    - Upload, then set everything up from the on-board menu (see the
-     [User Guide](Axworthy%20User%20Guide%20R0.pdf)).
+     [User Guide](Axworthy%20User%20Guide%20R1.pdf)).
 
 The electronics are all plug-in modules and through-hole soldering — no fine
 surface-mount work — so the build is approachable even if you're newer to

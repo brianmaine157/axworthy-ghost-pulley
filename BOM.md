@@ -15,7 +15,7 @@ not published; the bare board is a product sold by the author.
 > This BOM (documentation) is licensed CC BY 4.0. See LICENSE for full terms.
 
 **Build docs:** [Assembly Guide](Axworthy%20Assembly%20Guide%20R2.pdf) ·
-[User Guide](Axworthy%20User%20Guide%20R0.pdf) — step-by-step assembly (with
+[User Guide](Axworthy%20User%20Guide%20R1.pdf) — step-by-step assembly (with
 schematic and interconnect diagrams) and operating instructions.
 
 **Firmware:** [`firmware/ghost_pulley_xiao`](firmware/ghost_pulley_xiao) — the
