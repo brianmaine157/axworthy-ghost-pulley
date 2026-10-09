@@ -28,6 +28,14 @@
  * Board: install "Seeed SAMD Boards" and select "Seeeduino XIAO".
  *
  * STATUS: Public Release — tested and verified on the real Block 2 PCB.
+ *
+ * Changes since initial release:
+ *   - SCHEDULE runs now re-home against the limit switch at the START and END
+ *     of each scheduled window (corrects wind drift while idle; prevents a
+ *     crash into the pulley end). Continuous mode unchanged.
+ *   - Added a manual "Home" item to the Setup menu.
+ *   - Setup menu reordered; "Learn Positions" moved to the bottom to avoid
+ *     accidental presses.
  */
 
 //#define NO_OLED   // uncomment to use Serial Monitor instead of OLED
@@ -296,8 +304,9 @@ int      activeSettingsCount = SETTINGS_FWDBACK_COUNT;
 
 // Motion menu: Back + dynamic speed settings
 #define MOTION_FIXED_COUNT 1  // just << Back
-// Setup menu: Back + Learn + Schedule + Clock
-#define SETUP_FIXED_COUNT  4  // Back + Learn + Schedule + Clock
+// Setup menu: Back + Schedule + Clock + Home + Learn (Learn moved to bottom to
+// avoid accidental presses)
+#define SETUP_FIXED_COUNT  5  // Back + Set Schedule + Set Clock + Home + Learn
 int  settingsSel      = 0;
 bool settingsEditing  = false;
 
@@ -627,8 +636,13 @@ void loop() {
   // --- Ghost run state machine (non-blocking) ---
   if (shouldBeRunning() && posASet && posBSet) {
     if (!ghostRunning) {
-      // Starting fresh
-      enableMotor();
+      // Starting fresh.
+      // SCHEDULE runs re-home against the limit switch first. While idle the
+      // motor is de-energized, so the ghost can drift in the wind — re-homing
+      // guarantees a true position reference so the first move doesn't crash
+      // into the pulley end. homeMotor() handles its own enable/disable.
+      if (runState == RUN_SCHEDULE) homeMotor();
+      enableMotor();   // homeMotor() leaves the motor disabled
       ghostRunning = true;
       runDirection = 1;
       needsMove = false;
@@ -689,15 +703,12 @@ void loop() {
       stopMotion();
       ghostRunning = false;
       dwelling = false;
-      // Return to home position before disabling motor
-      if (runState == RUN_SCHEDULE && currentPos > 0) {
-        startMove(0);  // go home
-        // Wait for move to complete (blocking — schedule just ended, no rush)
-        while (!motionComplete) { /* wait */ }
-        noInterrupts();
-        currentPos = motPosition;
-        motionComplete = false;
-        interrupts();
+      // SCHEDULE just ended: re-home against the limit switch (not just a move to
+      // coordinate 0). A true re-home corrects any drift accumulated during the
+      // run and parks the ghost at a verified home, so overnight wind drift
+      // starts from a known point. homeMotor() handles its own enable/disable.
+      if (runState == RUN_SCHEDULE) {
+        homeMotor();
       }
       disableMotor();
       if (settingsPage == SET_NONE) drawMainMenu();
@@ -893,17 +904,26 @@ void handleSetupMenu(int ticks, bool btnShort) {
         settingsPage = SET_NONE;
         drawMainMenu();
         break;
-      case 1: // Learn Positions
+      case 1: // Set Schedule
+        drawSetSchedule();
+        break;
+      case 2: // Set Clock
+        drawSetClock();
+        break;
+      case 3: // Home — manual re-home against the limit switch
+        // Only when not actively running (homing mid-run would fight the run
+        // state machine). homeMotor() handles its own enable/disable and shows
+        // its own "Homing..." screen.
+        if (!ghostRunning) {
+          homeMotor();
+          drawSetupMenu();
+        }
+        break;
+      case 4: // Learn Positions (moved to bottom to avoid accidental presses)
         settingsPage = SET_LEARN_A;
         jogVelocity = 0;
         enableMotor();
         drawLearnScreen();
-        break;
-      case 2: // Set Schedule
-        drawSetSchedule();
-        break;
-      case 3: // Set Clock
-        drawSetClock();
         break;
     }
   }
@@ -1463,26 +1483,33 @@ void drawMotionMenu() {
 #endif
 }
 
+// Setup menu item labels (order matches the switch in handleSetupMenu).
+// Learn Positions is intentionally last so it isn't pressed by accident.
+static const char* const setupItems[SETUP_FIXED_COUNT] = {
+  "<< Back", "Set Schedule", "Set Clock", "Home", "Learn Positions"
+};
+
 void drawSetupMenu() {
 #ifndef NO_OLED
   display.clearDisplay(); display.setTextSize(1);
   display.setCursor(0, 0); display.println("== SETUP ==");
   display.drawLine(0, 10, 127, 10, SSD1306_WHITE);
-  display.setCursor(0, 16);
-  display.print(settingsSel == 0 ? "> " : "  "); display.println("<< Back");
-  display.setCursor(0, 28);
-  display.print(settingsSel == 1 ? "> " : "  "); display.println("Learn Positions");
-  display.setCursor(0, 40);
-  display.print(settingsSel == 2 ? "> " : "  "); display.println("Set Schedule");
-  display.setCursor(0, 52);
-  display.print(settingsSel == 3 ? "> " : "  "); display.println("Set Clock");
+  // Scrolling 4-line window (5 items won't all fit on the 64px screen).
+  int start = max(0, min(settingsSel - 1, SETUP_FIXED_COUNT - 4));
+  for (int i = 0; i < 4; i++) {
+    int idx = start + i;
+    if (idx >= SETUP_FIXED_COUNT) break;
+    display.setCursor(0, 16 + i * 12);
+    display.print(idx == settingsSel ? "> " : "  ");
+    display.println(setupItems[idx]);
+  }
   display.display();
 #else
   Serial.println("--- SETUP ---");
-  Serial.println(settingsSel == 0 ? "> << Back" : "  << Back");
-  Serial.println(settingsSel == 1 ? "> Learn Positions" : "  Learn Positions");
-  Serial.println(settingsSel == 2 ? "> Set Schedule" : "  Set Schedule");
-  Serial.println(settingsSel == 3 ? "> Set Clock" : "  Set Clock");
+  for (int i = 0; i < SETUP_FIXED_COUNT; i++) {
+    Serial.print(i == settingsSel ? "> " : "  ");
+    Serial.println(setupItems[i]);
+  }
 #endif
 }
 
