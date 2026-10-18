@@ -90,7 +90,7 @@ McMaster-Carr.
 
 | Part | Qty/Build | McMaster PN | Notes |
 |---|---|---|---|
-| Hex socket head cap screw, M3x0.50, 6mm | 27 | — | into M3 inserts (incl. 1 self-tapped for limit lever) |
+| Hex socket head cap screw, M3x0.50, 6mm | 30 | — | into M3 inserts (incl. 1 self-tapped for limit lever) |
 | Hex socket head cap screw, M2x0.40, 6mm | 4 | — | into M2 inserts (pinion + clock) |
 | Hex socket head cap screw, M2x0.40, 10mm | 6 | — | limit switch (2) + OLED (4) |
 | Hex socket head cap screw, M2x0.40, 4mm | 4 | — | into M2 inserts |
@@ -98,7 +98,7 @@ McMaster-Carr.
 | M2 washer | 8 | — | back the OLED screws so they don't protrude (use 4-8 as needed) |
 | Hex head bolt, M12x1.75, 55mm | 2 | — | pulley/output shaft |
 | Hex nut, M12x1.75 (grade A&B) | 2 | — | pulley/output shaft |
-| Heat-set insert, M3, tapered brass | 28 | 94180A331 | for M3 screws |
+| Heat-set insert, M3, tapered brass | 31 | 94180A331 | for M3 screws |
 | Heat-set insert, M4, tapered brass | 4 | 94180A351 | for M4 screws |
 | Heat-set insert, M2, tapered brass | 10 | 94180A307 | for M2 screws |
 | Wood screw, #8 x 2" | 6 | — | mounting the unit to wood/structure |

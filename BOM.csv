@@ -19,7 +19,7 @@ Mechanical,Joyfy hanging ghost 47 LED,The ghost itself,1,1,Target (Joyfy),-,http
 Mechanical,NEMA 17 stepper 1.5A ~42Ncm,Drive motor,1,3,Amazon (STEPPERONLINE),NEMA17,https://www.amazon.com/dp/B00PNEQKC0,200 steps/rev bipolar
 Mechanical,608 2RS ball bearing 8x22x7,Pulley shaft support,5,20,Amazon,608-2RS,https://a.co/d/0aapJzzu,Skate bearing
 Mechanical,Dowel pin 8x60mm SS,Pulley/shaft,2,5,Amazon (uxcell),-,https://a.co/d/0h0HNcBo,Match gear/pulley bore
-Fasteners,Hex socket head cap screw M3x0.50 6mm,Assembly (into M3 inserts),27,varies,Hardware store / McMaster,M3x0.50x6,-,Into M3 inserts; incl 1 self-tapped
+Fasteners,Hex socket head cap screw M3x0.50 6mm,Assembly (into M3 inserts),30,varies,Hardware store / McMaster,M3x0.50x6,-,Into M3 inserts; incl 1 self-tapped
 Fasteners,Hex socket head cap screw M2x0.40 6mm,Assembly (into M2 inserts),4,varies,Hardware store / McMaster,M2x0.40x6,-,Pinion + clock
 Fasteners,Hex socket head cap screw M2x0.40 10mm,Limit switch + OLED,6,varies,Hardware store / McMaster,M2x0.40x10,-,Limit switch (2) + OLED (4)
 Fasteners,Hex socket head cap screw M2x0.40 4mm,Assembly (into M2 inserts),4,varies,Hardware store / McMaster,M2x0.40x4,-,Into M2 heat-set inserts
@@ -27,7 +27,7 @@ Fasteners,Hex socket head cap screw M4x0.70 30mm,Assembly (into M4 inserts),4,va
 Fasteners,M2 washer,Back OLED screws,8,varies,Hardware store,M2 washer,-,Use 4-8 so screw tips don't protrude
 Fasteners,Hex head bolt M12x1.75 55mm,Pulley/output shaft,2,varies,Hardware store / McMaster,M12x1.75x55,-,Pulley/output shaft
 Fasteners,Hex nut M12x1.75 grade A&B,Pulley/output shaft,2,varies,Hardware store / McMaster,M12x1.75,-,Pulley/output shaft
-Fasteners,Heat-set insert M3 tapered brass,For M3 screws,28,varies,McMaster-Carr,94180A331,-,Press into printed plastic
+Fasteners,Heat-set insert M3 tapered brass,For M3 screws,31,varies,McMaster-Carr,94180A331,-,Press into printed plastic
 Fasteners,Heat-set insert M4 tapered brass,For M4 screws,4,varies,McMaster-Carr,94180A351,-,Press into printed plastic
 Fasteners,Heat-set insert M2 tapered brass,For M2 screws,10,varies,McMaster-Carr,94180A307,-,Press into printed plastic
 Fasteners,Wood screw #8 x 2in,Mount unit to wood/structure,6,varies,Hardware store,#8x2,-,Mounting screws
